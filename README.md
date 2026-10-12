@@ -1,6 +1,6 @@
 # lidarr-on-ultra-steroids
 A maintained fork of [lidarr-on-steroids](https://github.com/youegraillot/lidarr-on-steroids) with updated images and automatic weekly rebuilds.
-[![Build and Push](https://github.com/Crapcraft/lidarr-on-ultra-steroids/actions/workflows/build.yml/badge.svg)](https://github.com/Crapcraft/lidarr-on-ultra-steroids/actions/workflows/build.yml)
+[![Build and Push](https://github.com/waayer/lidarr-on-ultra-steroids/actions/workflows/build.yml/badge.svg)](https://github.com/waayer/lidarr-on-ultra-steroids/actions/workflows/build.yml)
 
 
 ## What's different from the original
@@ -15,7 +15,7 @@ This image uses `hotio/lidarr:nightly` which includes plugin support. Once you r
 ### Docker Compose
     services:
       lidarr:
-        image: ghcr.io/crapcraft/lidarr-on-ultra-steroids:latest
+        image: ghcr.io/waayer/lidarr-on-ultra-steroids:latest
         restart: unless-stopped
         ports:
           - "8686:8686"
@@ -36,7 +36,7 @@ This image uses `hotio/lidarr:nightly` which includes plugin support. Once you r
       -v <path>:/downloads \
       -v <path>:/music \
       --restart unless-stopped \
-      ghcr.io/crapcraft/lidarr-on-ultra-steroids:latest
+      ghcr.io/waayer/lidarr-on-ultra-steroids:latest
 
 ## Parameters
 | Parameter | Function |
