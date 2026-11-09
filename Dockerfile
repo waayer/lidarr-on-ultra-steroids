@@ -26,7 +26,7 @@ RUN mv /deemix-gui/dist/deemix-server /deemix-server
 
 FROM ghcr.io/hotio/lidarr:nightly
 
-LABEL maintainer="Crapcraft"
+LABEL maintainer="waayer"
 
 ENV DEEMIX_SINGLE_USER=true
 ENV AUTOCONFIG=true
