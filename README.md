@@ -5,7 +5,7 @@ A maintained fork of [lidarr-on-steroids](https://github.com/youegraillot/lidarr
 
 ## What's different from the original
 - Base image updated from `hotio/lidarr:pr-plugins` (dead) to `hotio/lidarr:nightly` (active, plugin support included)
-- Node.js updated from `node:21-alpine` (EOL) to `node:lts-alpine` (current LTS, auto-tracking)
+- Node.js updated from `node:21-alpine` (EOL) to `node:24-alpine` (LTS, pinned: newer Node images no longer include Yarn, which the Deemix build needs)
 - GitHub Actions workflow rebuilds and pushes to GHCR automatically every Monday
 
 ## Important note
