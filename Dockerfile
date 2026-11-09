@@ -1,4 +1,4 @@
-FROM --platform=$TARGETPLATFORM docker.io/library/node:lts-alpine as deemix
+FROM node:24-alpine AS deemix
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
@@ -7,7 +7,7 @@ RUN echo "Building for TARGETPLATFORM=$TARGETPLATFORM | BUILDPLATFORM=$BUILDPLAT
 RUN apk add --no-cache git jq python3 make gcc musl-dev g++ && \
     rm -rf /var/lib/apt/lists/*
 RUN git clone --recurse-submodules https://gitlab.com/RemixDev/deemix-gui.git
-WORKDIR deemix-gui
+WORKDIR /deemix-gui
 RUN case "$TARGETPLATFORM" in \
         "linux/amd64") \
             jq '.pkg.targets = ["node16-alpine-x64"]' ./server/package.json > tmp-json ;; \
